@@ -1,0 +1,26 @@
+html{
+  height: 100vh;
+  width: 100vw;
+}
+
+body{
+  height: 100%;
+  width: 100%;
+  background: rgb(43, 108, 50);
+}
+
+.mainSection{
+  margin-left: 50px;
+}
+
+.userCard{
+  width: 300px;
+  border: 1px solid white;
+  margin-bottom: 10px;
+}
+.userName{
+  margin-left: 10px;
+}
+.userDetailsList{
+  margin-left: 10px;
+}
