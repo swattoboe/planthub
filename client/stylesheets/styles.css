@@ -1,26 +1,223 @@
-html{
+html {
   height: 100vh;
   width: 100vw;
 }
 
-body{
+body {
   height: 100%;
   width: 100%;
-  background: rgb(43, 108, 50);
+  font-family: 'Quicksand', sans-serif;
+  background: #b1b8b5;
+  background: -webkit-linear-gradient(top right, #b1b8b5, #0fb101);
+  background: -moz-linear-gradient(top right, #b1b8b5, #0fb101);
+  background: linear-gradient(to bottom left, #b1b8b5, #0fb101);
+  overflow-y: hidden;
 }
 
-.mainSection{
+#headerTitle {
+  margin-left: 20px;
+  font-family: 'Leckerli One', cursive;
+  font-size: 50px;
+}
+.profileLink{
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+.profileLink:visited{
+  color: white;
+}
+
+.profileLink:hover{
+  color: rgb(41, 72, 134);
+ transition: color .5s ease;
+
+}
+
+#loginForm {
+  margin-left: 20px;
+}
+
+#loginUsername {
+  margin-left: 20px;
+  border-radius: 5px;
+  margin-bottom: 3px;
+}
+
+#loginPassword{
+  margin-left: 26px;
+  border-radius: 5px;
+}
+
+.mainSection {
   margin-left: 50px;
+  overflow-x: hidden;
+
 }
 
-.userCard{
-  width: 300px;
+#profileContainer{
+  width: 40%;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  border: 5px solid white;
+  border-radius: 15px;
+  margin-left: 20px;
+}
+
+.profileUsername {
+  margin-left: 20px;
+}
+
+#profileDetails{
+  display: flex;
+  flex-direction: column;
+  padding:0;
+  margin-left: 20px;
+  height: 50px;
+}
+
+.forSale {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  height: 650px;
+  width: 100%;
+}
+
+.plantCardContainer {
+  width: 90%;
+  margin-top: 5px;
+  margin-bottom: 5px;
   border: 1px solid white;
+  border-radius: 10px;
+  background: rgba(181, 209, 183, 0.779);
+}
+
+.plantCard{
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+.deleteButton {
+  background: white;
+  height: 25px;
+  width: 70px;
+  border-radius: 5px;
+  margin-left: 10px;
   margin-bottom: 10px;
 }
-.userName{
+.plantName{
+  margin-left: 10px;
+
+}
+.species{
   margin-left: 10px;
 }
-.userDetailsList{
+
+.price{
   margin-left: 10px;
 }
+
+
+/* .formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  height: 100px;
+  width: 75%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+} */
+
+.addPlantForm {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  height: 100px;
+  padding-left: 20px;
+  width: 75%;
+  height: 100px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#nameInput{
+  width: 150px;
+  margin-left: 30px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+
+#speciesInput {
+  width: 150px;
+  margin-left: 60px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+#priceInput {
+  width: 150px;
+  margin-left: 79px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.addPlantSubmit{
+  width: 100px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.userContainer {
+  border: 5px solid white;
+  border-radius: 10px;
+  max-height: 600px;
+  width: 40%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.userCard {
+  width: 300px;
+  border: 1px solid white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+.userName {
+  margin-left: 10px;
+}
+.userDetailsList {
+  margin-left: 10px;
+  list-style: none;
+}
+
+.plantListItem {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.plantList{
+  list-style: none;
+}
+
+/* .plantArray {
+  margin-left: 10px;
+} */
+
+.forSalePlant {
+  font-weight: 700;
+  margin-left: 10px;
+
+}
+

@@ -20,7 +20,11 @@ const newUser = new Schema({
   name: {type: String, required: true},
   email: {type: String, required: true},
   location: {type: String, required: true},
-  plants: Array
+  plants: [{
+    name: {type: String, required: true},
+    species: String,
+    price: Number
+  }]
 });
 
 const User = mongoose.model('user', newUser);

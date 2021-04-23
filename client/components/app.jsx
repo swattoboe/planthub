@@ -9,7 +9,7 @@ import '../stylesheets/styles.css';
 const App = () => {
   return (
     <div className="router">
-      <h1>PLANTHUB -- Welcome</h1>
+      <h1 id="headerTitle">PlantHub</h1>
       <main>
         <Switch>
           <Route

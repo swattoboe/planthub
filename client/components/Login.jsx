@@ -4,9 +4,11 @@ import LoginForm from './LoginForm.jsx';
 const Login = () => {
 
   return (
+    <div className="loginContainer">
     <div className="loginFormContainer"> 
-      <h2>Login</h2>
+      <h2 >Login</h2>
       <LoginForm />
+    </div>
     </div>
   );
 };

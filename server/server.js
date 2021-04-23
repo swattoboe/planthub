@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-
+// const bodyParser = require('body-parser')
 const userController = require('./controllers/userController.js');
 
 
@@ -9,6 +9,7 @@ app.use('/build', express.static(path.join(__dirname, '../build')));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// app.use(express.bodyParser.urlencoded({extended: true}));
 
 app.use((err, req, res, next) => {
   console.log(err);
@@ -41,6 +42,16 @@ app.get('/profile', (req, res) => {
 app.get('/profile/user', userController.getUser, (req, res) => {
   return res.status(200).json(res.locals.user);
 });
+
+app.put('/profile/addPlant', userController.addPlants, userController.getUser, (req, res) => {
+  // return res.status(200).json(res.locals.user);
+  return res.status(200);
+
+});
+
+app.put('/profile/deletePlant', userController.deletePlant, userController.getUser, (req, res) => {
+  return res.status(200);
+})
 
 app.get('/signup', (req, res) => {
 });

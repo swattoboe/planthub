@@ -50,11 +50,11 @@ class LoginForm extends Component {
   render(){
     if(this.state.redirect === true){
 
-     return <Redirect to={{
+      return <Redirect to={{
         pathname: '/main',
         state: {
-         username: this.state.username,
-         password: this.state.password
+          username: this.state.username,
+          password: this.state.password
         }
       }} />;
     }
@@ -62,17 +62,17 @@ class LoginForm extends Component {
 
     return (
       <div>
-        <form  onSubmit={this.handleSubmit}>
+        <form className="loginForm" onSubmit={this.handleSubmit}>
           <div>
             <label>
           Username:
-              <input name="username" type="text" value={this.state.username} onChange={this.handleChange}/>
+              <input id="loginUsername" name="username" type="text" value={this.state.username} onChange={this.handleChange}/>
             </label>
           </div>
           <div>
             <label>
           Password:
-              <input  name="password" type="password" value={this.state.password} onChange={this.handleChange} />
+              <input id="loginPassword" name="password" type="password" value={this.state.password} onChange={this.handleChange} />
             </label>
           </div>
           <div>
@@ -80,7 +80,7 @@ class LoginForm extends Component {
           </div>
         </form>
         No account? 
-        <Link to="/signup">Sign up!</Link>
+        <Link to="/signup"> Sign up!</Link>
       </div>
 
     );

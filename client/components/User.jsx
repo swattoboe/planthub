@@ -27,7 +27,8 @@ class User extends Component {
   }
 
   render() {
-    console.log(this.props.history)
+    // console.log(this.props.history);
+    console.log(this.state)
     if (!this.state.fetchedUsers) return (
       <div>
         <h1>We appreciate your patience while data is loading...</h1>
@@ -60,7 +61,7 @@ class User extends Component {
               username: this.props.history.location.state.username,
               password: this.props.history.location.state.password
             }
-            }}>Profile</Link>
+          }}>Profile</Link>
           <h2>Welcome to PlantHub!</h2>
           <h3>Current Sellers</h3>
         </header>
