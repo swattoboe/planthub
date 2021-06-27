@@ -56,8 +56,9 @@ app.put('/profile/deletePlant', userController.deletePlant, userController.getUs
 app.get('/signup', (req, res) => {
 });
 
-app.post('/signup', userController.createUser,  (req, res) => {
-  return res.status(200).json(res.locals.user);
+app.post('/signup/createUser', userController.createUser,  (req, res) => {
+  console.log('in post to signup')
+  return res.status(200).redirect('/');
 });
 
 app.delete('/delete', userController.deleteUser, (req, res) => {

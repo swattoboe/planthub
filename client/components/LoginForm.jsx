@@ -31,7 +31,7 @@ class LoginForm extends Component {
     fetch('/login', {
       method: 'POST',
       headers: {
-        'Content-Type': 'Application/JSON'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(this.state)
     })

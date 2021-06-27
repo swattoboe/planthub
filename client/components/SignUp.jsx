@@ -26,10 +26,10 @@ class SignUp extends Component {
 
   handleSubmit(event){
     event.preventDefault();
-    fetch('/signup', {
+    fetch('/signup/createUser', {
       method: 'POST',
       headers: {
-        'Content-Type': 'Application/JSON'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(this.state)
     })

@@ -66,6 +66,7 @@ userController.verifyUser = async (req, res, next) => {
   const { username, password } = req.body;
   if (!username || !password) return next('Missing usernmae or password in userController.verifyUser');
   try {
+    console.log('in verifyUser')
     const user = await User.findOne({username: username, password: password});
     res.locals.user = user;
     return next();
